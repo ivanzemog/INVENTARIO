@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31613.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "INVENTARIO", ".", "{2DF2B6CA-69FB-4B11-9568-B579115588EC}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_55951"
+		Debug.AspNetCompiler.PhysicalPath = "..\INVENTARIO\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55951\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_55951"
+		Release.AspNetCompiler.PhysicalPath = "..\INVENTARIO\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55951\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "55951"
+		SlnRelativePath = "..\INVENTARIO\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DF2B6CA-69FB-4B11-9568-B579115588EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DF2B6CA-69FB-4B11-9568-B579115588EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {073BFA09-1174-4668-804F-E32F07A04473}
+	EndGlobalSection
+EndGlobal
