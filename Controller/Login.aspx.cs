@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+
 
 public partial class View_Login : System.Web.UI.Page
 {
@@ -29,9 +25,12 @@ public partial class View_Login : System.Web.UI.Page
         {
             error.Attributes.Add("class", "d-none");
             Session["user"] = eAdmin;
-            Response.Redirect("inicio.aspx");
+            Session["numero"] = new Random().Next(1000, 9999);
+            new Correos().enviarCorreoValidacion(eAdmin.Correo, int.Parse(Session["numero"].ToString()));
+            Response.Redirect("Verificacion.aspx");
 
 
         }
     }
+
 }
