@@ -1,9 +1,11 @@
-﻿<%@ Page Title="BODEGA PLUS" Language="C#" MasterPageFile="~/View/MasterPage.master" AutoEventWireup="true" CodeFile="~/Controller/inicio.aspx.cs" Inherits="View_inicio" %>
+﻿<%@ Page Title="BODEGA PLUS" Language="C#" MasterPageFile="~/View/MasterPage.master" AutoEventWireup="true" CodeFile="~/Controller/catalogo.aspx.cs" Inherits="View_catalogo" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-     
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <div>
+
     <h1><center><b>BODEGA PLUS </b> </center></h1>
     <p>
         <center>
@@ -21,8 +23,7 @@
     <div class="col-md-4">
         <h2><b>CATALOGO</b></h2>
         <p> <img src="/Imagenes/4.jpg" /></p>
-        <asp:ImageButton ID="ImageButton1" runat="server" Height="96px" ImageUrl="~/Imagenes/2.png" OnClick="Page_Load" />
-        
+        <siteMapNode url="~/ShowRandomProduct.aspx" title="Master Pages and ASP.NET AJAX" />
     </div>
     <div class="col-md-4">
         <h2><b>PROVEDORES</b></h2>
@@ -32,9 +33,10 @@
     </div>
     <div class="col-md-4">
         <h2><b>ADMINISTRACION</b></h2>
-        <p> <img src="/Imagenes/3.jpg" /></p>
+        <p> <img src="~/imagenes/3.jpg" /></p>
     </div>
 </div>
 
 </asp:Content>
+
 
