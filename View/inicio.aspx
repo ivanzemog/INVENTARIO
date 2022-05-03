@@ -1,21 +1,9 @@
 ﻿<%@ Page Title="BODEGA PLUS" Language="C#" MasterPageFile="~/View/MasterPage.master" AutoEventWireup="true" CodeFile="~/Controller/inicio.aspx.cs" Inherits="View_inicio" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-      <img src="/Imagenes/lp.png" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <h1><center><b>BODEGA PLUS </b> </center></h1>
-    <p>
-        <center>
-            este aplicativo es para el control del inventario y la organizacion de los
-            productos de un setablecemiento
-        </center>
-    </p>
-    <p>
-        <center>
-            <img src="/Imagenes/2.png" />
-        </center>
-    </p>
+   <center><img src="/Imagenes/lp.png" /></center>
 </div>
 <div class="row">
     <div class="col-md-4">
