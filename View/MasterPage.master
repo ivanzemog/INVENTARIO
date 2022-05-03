@@ -20,6 +20,10 @@
                   
                     </asp:ContentPlaceHolder>
 
+                    <p>
+                        <br />
+                    </p>
+
         <br />
           <div class="mt-5 p-4 bg-dark text-white text-center">
             <p>UNIVERSIDAD DE CUNDINAMARCA</p>
