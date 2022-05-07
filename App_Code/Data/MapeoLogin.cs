@@ -25,4 +25,9 @@ public class MapeoLogin : DbContext
         base.OnModelCreating(modelBuilder);
     }
     public virtual DbSet<EUsuario> Usuarios { get; set; }
+    public virtual DbSet<EProducto> producto { get; set; }
+    public virtual DbSet<EFactura> factura { get; set; }
+    public virtual DbSet<EDetalleFactura> detalleFactura { get; set; }
+    public virtual DbSet<EEstadoFactura> estadoFactura { get; set; }
+
 }
