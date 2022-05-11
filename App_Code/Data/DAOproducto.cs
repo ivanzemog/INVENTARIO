@@ -11,7 +11,7 @@ public class DAOProducto
 {
     public void InsertarProducto(EProducto producto)
     {
-        using (var db = new Mapeo())
+        using (var db = new MapeoLogin())
         {
             db.producto.Add(producto);
             db.SaveChanges();
@@ -21,7 +21,7 @@ public class DAOProducto
 
     public List<EProducto> ObtenerProductos()
     {
-        using (var db = new Mapeo())
+        using (var db = new MapeoLogin())
         {
             return db.producto.OrderBy(x => x.Nombre).ToList();
 
@@ -29,11 +29,11 @@ public class DAOProducto
 
     }
 
-    public void ModificarCantidad(int productoId, int cantidad)
+   public void ModificarCantidad(int productoid, int cantidad)
     {
-        using (var db = new Mapeo())
+        using (var db = new MapeoLogin())
         {
-            EProducto producto = db.producto.First(x => x.Id == productoId);
+            EProducto producto = db.producto.First(x => x.id == productoid);
 
             producto.Cantidad = producto.Cantidad - cantidad;
 

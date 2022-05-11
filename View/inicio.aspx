@@ -1,4 +1,4 @@
-﻿<%@ Page Title="BODEGA PLUS" Language="C#" MasterPageFile="~/View/MasterPage.master" AutoEventWireup="true" CodeFile="~/Controller/inicio.aspx.cs" Inherits="View_inicio" %>
+﻿ <%@ Page Title="BODEGA PLUS" Language="C#" MasterPageFile="~/View/MasterPage.master" AutoEventWireup="true" CodeFile="~/Controller/inicio.aspx.cs" Inherits="View_inicio" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -18,6 +18,7 @@
         <p>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <img src="/Imagenes/5.jpg" />
+            <a href="provedor.aspx">mas</a>
         </p>
     </div>
     <div class="col-md-4">

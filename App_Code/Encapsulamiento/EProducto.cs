@@ -3,14 +3,14 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 [Serializable]
-[Table("producto", Schema = "productos")]
+[Table("producto", Schema = "inventario")]
 public class EProducto
 {
-    private int id;
-    private string nombre;
-    private int cantidad;
-    private double precio;
-    private string imagen;
+    public int id;
+    public string nombre;
+    public int cantidad;
+    public string precio;
+    public string imagen;
 
 
     [Key]
@@ -21,7 +21,7 @@ public class EProducto
     [Column("cantidad")]
     public int Cantidad { get => cantidad; set => cantidad = value; }
     [Column("precio")]
-    public double Precio { get => precio; set => precio = value; }
+    public string Precio { get => precio; set => precio = value; }
     [Column("imagen")]
     public string Imagen { get => imagen; set => imagen = value; }
 }

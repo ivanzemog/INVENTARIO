@@ -1,5 +1,4 @@
-﻿<%@ Page Title="BODEGA PLUS" Language="C#" MasterPageFile="~/View/MasterPage.master" AutoEventWireup="true" CodeFile="~/Controller/catalogo.aspx.cs" Inherits="View_catalogo" %>
-
+﻿<%@ Page Title="BODEGA PLUS" Language="C#" MasterPageFile="~/View/MasterPage.master" AutoEventWireup="true" CodeFile="~/Controller/provedor.aspx.cs" Inherits="View_provedor" %>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
@@ -16,6 +15,7 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+           <br />
            <section class="section-padding" id="booking">
                 <div class="container">
                     <div class="row">
@@ -28,7 +28,7 @@
                                     <div class="row">
 
                                          <div class="col-lg-6 col-12">
-                                            <asp:TextBox  class="form-control" ID="id" runat="server" placeholder="CODIGO"  ></asp:TextBox>
+                                            <asp:TextBox  class="form-control" ID="Codigo" runat="server" placeholder="CODIGO"  ></asp:TextBox>
                                             
                                         </div>
 
@@ -36,30 +36,27 @@
                                             <input class="form-control" id="nombre" type="text" placeholder="Enter your first name" runat="server" />
                                              <label for="inputFirstName">Nombre</label>
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="nombre" ErrorMessage="*" ForeColor="Red" ValidationGroup="RF_Validar"></asp:RequiredFieldValidator>
-                                       
                                         </div>
 
                                         <div class="col-lg-6 col-12">
-                                            <asp:TextBox  class="form-control" ID="cantidad" runat="server" placeholder="Cantidad"  ></asp:TextBox>
+                                            <input class="form-control" id="cedula" type="text" placeholder="Enter your first name" runat="server" />
+                                             <label for="inputFirstName">Cedula</label>
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="cedula" ErrorMessage="*" ForeColor="Red" ValidationGroup="RF_Validar"></asp:RequiredFieldValidator>
+                                       
                                         </div>
                                         <div class="col-lg-6 col-12">
-                                            <input class="form-control" id="precio" type="text" placeholder="Enter your first name" runat="server" />
-                                             <label for="inputFirstName">Precio</label>
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="precio" ErrorMessage="*" ForeColor="Red" ValidationGroup="RF_Validar"></asp:RequiredFieldValidator>
+                                            
+                                            <input class="form-control" id="empresa" type="text" placeholder="Enter your first name" runat="server" />
+                                             <label for="inputFirstName">Empresa</label>
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="empresa" ErrorMessage="*" ForeColor="Red" ValidationGroup="RF_Validar"></asp:RequiredFieldValidator>
                                        
                                         </div>
 
-
-                                       
-                                        <div class="col-lg-6 col-12">
-                                             <div class="col-lg-3 col-md-4 col-6 mx-auto">
+                                        <div class="col-lg-3 col-md-4 col-6 mx-auto">
                                           <div class="d-grid">
-                                            <asp:Button ID="Button1" runat="server" Text="registar" OnClick="Registrarproducto" class="btn btn-primary btn-block" ValidationGroup="RF_Validar" />
+                                            <asp:Button ID="Button1" runat="server" Text="registar" OnClick="Registrarse" class="btn btn-primary btn-block" ValidationGroup="RF_Validar" />
                                         </div>  
                                       </div>
-                                            
-                                        </div>
-   
                                     </div>
 
                             </div>
@@ -69,5 +66,3 @@
                 </div>
             </section>
 </asp:Content>
-
-

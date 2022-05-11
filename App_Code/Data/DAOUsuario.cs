@@ -11,7 +11,7 @@ public class DAOUsuario
     {
         using (var db = new MapeoLogin())
         {
-            return db.Usuarios.Where(x => x.Correo.Equals(eUsuario.Correo) && x.Clave.Equals(eUsuario.Clave)).FirstOrDefault();
+            return db.usuario.Where(x => x.Correo.Equals(eUsuario.Correo) && x.Clave.Equals(eUsuario.Clave)).FirstOrDefault();
         }
     }
 
@@ -20,7 +20,7 @@ public class DAOUsuario
         EUsuario cedula = new EUsuario();
         using (var db = new MapeoLogin())
         {
-            cedula = db.Usuarios.Where(x => x.Cedula.Equals(eUsuario.Cedula)).FirstOrDefault();
+            cedula = db.usuario.Where(x => x.Cedula.Equals(eUsuario.Cedula)).FirstOrDefault();
 
             if(cedula == null)
             {
@@ -39,7 +39,7 @@ public class DAOUsuario
 
         using (var db = new MapeoLogin())
         {
-            correoNuevo = db.Usuarios.Where(x => x.Correo.Equals(eUsuario.Correo)).FirstOrDefault();
+            correoNuevo = db.usuario.Where(x => x.Correo.Equals(eUsuario.Correo)).FirstOrDefault();
 
             if (correoNuevo == null)
             {
@@ -56,7 +56,7 @@ public class DAOUsuario
     {
         using (var db = new MapeoLogin())
         {
-            db.Usuarios.Add(eUsuario);
+            db.usuario.Add(eUsuario);
             db.SaveChanges();
         }
     }
