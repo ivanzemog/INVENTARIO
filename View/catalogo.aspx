@@ -3,7 +3,6 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-     <center><img src="/Imagenes/lp.png" /></center>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <link href="../App_Themes/webSalud/bootstrap-icons.css" rel="stylesheet" type="text/css" />
@@ -17,6 +16,7 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+     <asp:ImageButton id="imagebutton" runat="server" ImageUrl="/Imagenes/lp.png" OnClick="ImageButton1_Click" Height="116px" Width="150px"/>
            <section class="section-padding" id="booking">
                 <div class="container">
                     <div class="row">

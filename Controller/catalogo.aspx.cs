@@ -21,4 +21,9 @@ public partial class View_catalogo : Page
 
          new DAOProducto().InsertarProducto(producto);
     }
+
+    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("inicio.aspx");
+    }
 }

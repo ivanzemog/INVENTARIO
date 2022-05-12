@@ -22,4 +22,8 @@ public partial class View_provedor : System.Web.UI.Page
 
         new DAOprovedor().Nuevoprovedor(eprovedor);
     }
+    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("inicio.aspx");
+    }
 }
