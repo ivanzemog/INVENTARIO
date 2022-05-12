@@ -3,6 +3,7 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+     <center><img src="/Imagenes/lp.png" /></center>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <link href="../App_Themes/webSalud/bootstrap-icons.css" rel="stylesheet" type="text/css" />
