@@ -12,63 +12,62 @@
     <link href="../App_Themes/webSalud/owl.theme.default.min.css" rel="stylesheet" type="text/css" />
     <link href="../App_Themes/webSalud/owl.theme.default.min.css" rel="stylesheet" type="text/css" />
     <link href="../App_Themes/webSalud/templatemo-medic-care.css" rel="stylesheet" type="text/css" />
-</asp:Content>
-
+    <style type="text/css">
+        .auto-style1 {
+            height: 88px;
+            width: 869px;
+        }
+        .auto-style2 {
+            width: 131px;
+        }
+        .auto-style3 {
+            width: 198px;
+        }
+    </style>
+    </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-     <asp:ImageButton id="imagebutton" runat="server" ImageUrl="/Imagenes/lp.png" OnClick="ImageButton1_Click" Height="116px" Width="150px"/>
-           <section class="section-padding" id="booking">
-                <div class="container">
-                    <div class="row">
-                    
-                        <div class="col-lg-8 col-12 mx-auto">
-                            <div class="booking-form">
-                                 <p></p>
-                                 <p></p>
-                                <h2 class="text-center mb-lg-3 mb-2">Registra los datos</h2>
-                                    <div class="row">
-
-                                         <div class="col-lg-6 col-12">
-                                            <asp:TextBox  class="form-control" ID="id" runat="server" placeholder="CODIGO"  ></asp:TextBox>
-                                            
-                                        </div>
-
-                                        <div class="col-lg-6 col-12">
-                                            <input class="form-control" id="nombre" type="text" placeholder="Enter your first name" runat="server" />
-                                             <label for="inputFirstName">Nombre</label>
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="nombre" ErrorMessage="*" ForeColor="Red" ValidationGroup="RF_Validar"></asp:RequiredFieldValidator>
-                                       
-                                        </div>
-
-                                        <div class="col-lg-6 col-12">
-                                            <asp:TextBox  class="form-control" ID="cantidad" runat="server" placeholder="Cantidad"  ></asp:TextBox>
-                                        </div>
-                                        <div class="col-lg-6 col-12">
-                                            <input class="form-control" id="precio" type="text" placeholder="Enter your first name" runat="server" />
-                                             <label for="inputFirstName">Precio</label>
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="precio" ErrorMessage="*" ForeColor="Red" ValidationGroup="RF_Validar"></asp:RequiredFieldValidator>
-                                       
-                                        </div>
-
-
-                                       
-                                        <div class="col-lg-6 col-12">
-                                             <div class="col-lg-3 col-md-4 col-6 mx-auto">
-                                          <div class="d-grid">
-                                            <asp:Button ID="Button1" runat="server" Text="registar" OnClick="Registrarproducto" class="btn btn-primary btn-block" ValidationGroup="RF_Validar" />
-                                        </div>  
-                                      </div>
-                                            
-                                        </div>
-   
-                                    </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
+    <asp:ImageButton id="imagebutton" runat="server" ImageUrl="/Imagenes/lp.png" OnClick="ImageButton1_Click" Height="116px" Width="150px"/> 
+ <table class="auto-style1">
+            <tr>
+                <td colspan="2" style="text-align: center">Ejemplo Crud con Postgres</td>
+            </tr>
+            <tr>
+                <td>Objeto</td>
+                <td class="auto-style3">
+                    <asp:TextBox ID="txt_objeto" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>Descripcion</td>
+                <td class="auto-style3">
+                    <asp:TextBox ID="txt_decripcion" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">
+                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Visualizar" />
+                </td>
+                <td class="auto-style3">
+                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Modificar" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">
+                    <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Insertar" />
+                </td>
+                <td class="auto-style3">
+                    <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Eliminar" />
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center">
+                    <asp:GridView ID="grilla" runat="server">
+                    </asp:GridView>
+                </td>
+                <td class="auto-style3">&nbsp;</td>
+            </tr>
+        </table>
 </asp:Content>
 
 

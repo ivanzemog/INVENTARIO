@@ -10,9 +10,7 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-
-
-    </head>
+</head>
 <body>
     <form id="form1" runat="server">
         
@@ -20,14 +18,11 @@
                   
                     </asp:ContentPlaceHolder>
 
-                    <p>
-                        <br />
-                    </p>
 
 
 
+        
 
-        <br />
           <div class="mt-5 p-4 bg-dark text-white text-center">
             <p>UNIVERSIDAD DE CUNDINAMARCA</p>
               <p>INGENIERIA DE SOFTWARE</p>
