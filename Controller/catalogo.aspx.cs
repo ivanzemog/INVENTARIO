@@ -36,7 +36,7 @@ public partial class View_catalogo : Page
     {
         NpgsqlConnection conexion = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["postgres"].ConnectionString);
         conexion.Open();
-        NpgsqlCommand comand = new NpgsqlCommand("INSERT INTO public.crudtb(objeto, descripcion) VALUES ('" + txt_objeto.Text + "','" + txt_decripcion.Text + "')", conexion);
+        NpgsqlCommand comand = new NpgsqlCommand("INSERT INTO inventario.producto(nombre, precio, imagen, cantidad) VALUES ('" + txt_objeto.Text + "','" + txt_decripcion.Text + "','" + txt_decripcion.Text + "','" + txt_decripcion.Text + "')", conexion);
         comand.ExecuteNonQuery();
         conexion.Close();
     }
@@ -44,7 +44,7 @@ public partial class View_catalogo : Page
     {
         NpgsqlConnection conection = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["postgres"].ConnectionString);
         conection.Open();
-        NpgsqlCommand command = new NpgsqlCommand("UPDATE public.crudtb SET descripcion='" + txt_decripcion.Text + "' WHERE objeto='" + txt_objeto.Text + "'", conection);
+        NpgsqlCommand command = new NpgsqlCommand("UPDATE inventario.producto SET cantidad='" + txt_decripcion.Text + "' WHERE nombre='" + txt_objeto.Text + "'", conection);
         command.ExecuteNonQuery();
         conection.Close();
     }
@@ -52,7 +52,7 @@ public partial class View_catalogo : Page
     {
         NpgsqlConnection conection = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["postgres"].ConnectionString);
         conection.Open();
-        NpgsqlCommand command = new NpgsqlCommand("DELETE FROM public.crudtb WHERE objeto='" + txt_objeto.Text + "'", conection);
+        NpgsqlCommand command = new NpgsqlCommand("DELETE FROM inventario.producto WHERE nombre='" + txt_objeto.Text + "'", conection);
         command.ExecuteNonQuery();
         conection.Close();
     }
