@@ -7,21 +7,21 @@ using System.ComponentModel.DataAnnotations.Schema;
 public class EProducto
 {
     public int id;
-    public string nombre;
-    public int cantidad;
-    public string precio;
-    public string imagen;
+    public string nombrep;
+    public string cantidadp;
+    public string preciop;
+    public string imagenp;
 
 
     [Key]
     [Column("id")]
     public int Id { get => id; set => id = value; }
     [Column("nombre")]
-    public string Nombre { get => nombre; set => nombre = value; }
+    public string Nombre { get => nombrep; set => nombrep = value; }
     [Column("cantidad")]
-    public int Cantidad { get => cantidad; set => cantidad = value; }
+    public string Cantidad { get => cantidadp; set => cantidadp = value; }
     [Column("precio")]
-    public string Precio { get => precio; set => precio = value; }
+    public string Precio { get => preciop; set => preciop = value; }
     [Column("imagen")]
-    public string Imagen { get => imagen; set => imagen = value; }
+    public string Imagen { get => imagenp; set => imagenp = value; }
 }

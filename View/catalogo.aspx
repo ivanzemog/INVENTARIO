@@ -14,78 +14,127 @@
     <link href="../App_Themes/webSalud/templatemo-medic-care.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         .auto-style1 {
-            height: 88px;
-        width: 869px;
-    }
-    .auto-style2 {
-        width: 131px;
-    }
-    .auto-style3 {
-        width: 198px;
-    }
+            width: 249px;
+        }
+        .auto-style2 {
+            width: 249px;
+            height: 21px;
+            text-align: center;
+        }
+        .auto-style3 {
+            height: 21px;
+        }
+        .auto-style4 {
+            width: 249px;
+            text-align: center;
+        }
+        .auto-style5 {
+            width: 188px;
+        }
+        .auto-style6 {
+            height: 21px;
+            width: 188px;
+        }
+        .auto-style7 {
+            width: 188px;
+            text-align: center;
+        }
     </style>
     </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <asp:ImageButton id="imagebutton" runat="server" ImageUrl="/Imagenes/lp.png" OnClick="ImageButton1_Click" Height="116px" Width="150px"/> 
- <table class="auto-style1">
+    <div class="row">
+
+        
+
+        <table align="center" class="w-100">
             <tr>
-                <td colspan="2" style="text-align: center">catalogo</td>
+                <td class="text-center" colspan="3">CATALOGO</td>
             </tr>
             <tr>
-                <td class="text-start">nombre</td>
-                <td class="auto-style3">
-                    <asp:TextBox ID="txt_objeto" runat="server"></asp:TextBox>
+                <td class="auto-style4">nombre</td>
+                <td class="auto-style5">
+                    <asp:TextBox ID="nombrep" runat="server"></asp:TextBox>
                 </td>
-            </tr>
-            <tr>
-                <td>precio</td>
-                <td class="auto-style3">
-                    <asp:TextBox ID="txt_decripcion" runat="server"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td>imagen</td>
-                <td class="auto-style3">
-                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td>cantidad</td>
-                <td class="auto-style3">
-                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style2">
-                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Visualizar" />
-                </td>
-                <td class="auto-style3">
-                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Modificar" />
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style2">
-                    <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Insertar" />
-                </td>
-                <td class="auto-style3">
-                    <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Eliminar" />
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style2">
-                    &nbsp;</td>
-                <td class="auto-style3">
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td style="text-align: center">
-                    <asp:GridView ID="grilla" runat="server">
+                <td>
+                    <asp:GridView ID="gvproducto" runat="server" DataSourceID="ObjectDataSource1">
                     </asp:GridView>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style4">precio </td>
+                <td class="auto-style5">
+                    <asp:TextBox ID="preciop" runat="server"></asp:TextBox>
+
+                </td>
+                <td>
+                    <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" OnSelecting="ObjectDataSource1_Selecting"></asp:ObjectDataSource>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">cantidad</td>
+                <td class="auto-style6">
+                    <asp:TextBox ID="cantidadp" runat="server"></asp:TextBox>
+                </td>
+                <td class="auto-style3">
+                    <table class="w-100">
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">imagen</td>
+                <td class="auto-style6">
+                    <asp:TextBox ID="imagenp" runat="server"></asp:TextBox>
                 </td>
                 <td class="auto-style3">&nbsp;</td>
             </tr>
+            <tr>
+                <td class="auto-style1">&nbsp;</td>
+                <td class="auto-style5">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style4">
+                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="mostar" />
+                </td>
+                <td class="auto-style7">
+                    <asp:Button ID="Button2" runat="server" Text="insertar" />
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style4">
+                    <asp:Button ID="Button3" runat="server" Text="modificar" />
+                </td>
+                <td class="auto-style7">
+                    <asp:Button ID="Button4" runat="server" Text="eliminar" />
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style1">&nbsp;</td>
+                <td class="auto-style5">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
         </table>
+
+        
+
+    </div>
+
 </asp:Content>
 
 

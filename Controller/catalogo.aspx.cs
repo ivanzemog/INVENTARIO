@@ -22,38 +22,27 @@ public partial class View_catalogo : Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        NpgsqlConnection conexion = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["postgres"].ConnectionString);
-        conexion.Open();
-        NpgsqlCommand comand = new NpgsqlCommand("SELECT * FROM inventario.producto", conexion);
-        NpgsqlDataAdapter ad = new NpgsqlDataAdapter(comand);
-        DataTable dt = new DataTable();
-        ad.Fill(dt);
-        grilla.DataSource = dt;
-        grilla.DataBind();
-        conexion.Close();
-    }
-    protected void Button3_Click(object sender, EventArgs e)
-    {
-        NpgsqlConnection conexion = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["postgres"].ConnectionString);
-        conexion.Open();
-        NpgsqlCommand comand = new NpgsqlCommand("INSERT INTO inventario.producto(nombre, precio, imagen, cantidad) VALUES ('" + txt_objeto.Text + "','" + txt_decripcion.Text + "','" + txt_decripcion.Text + "','" + txt_decripcion.Text + "')", conexion);
-        comand.ExecuteNonQuery();
-        conexion.Close();
+;
+        new DAOProducto().ObtenerProductos();        
+
     }
     protected void Button2_Click(object sender, EventArgs e)
     {
-        NpgsqlConnection conection = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["postgres"].ConnectionString);
-        conection.Open();
-        NpgsqlCommand command = new NpgsqlCommand("UPDATE inventario.producto SET cantidad='" + txt_decripcion.Text + "' WHERE nombre='" + txt_objeto.Text + "'", conection);
-        command.ExecuteNonQuery();
-        conection.Close();
+        EProducto producto = new EProducto();
+        producto.Nombre = nombrep.Text;
+        producto.Precio = preciop.Text;
+        producto.Cantidad = cantidadp.Text;
+        producto.Imagen = imagenp.Text;
+        List<EProducto> catalogo = new List<EProducto>();
+        catalogo.Add(producto);
+        this.gvproducto.DataSource = catalogo;
+        this.gvproducto.DataBind();
+        new DAOProducto().InsertarProducto(producto);
     }
-    protected void Button4_Click(object sender, EventArgs e)
+
+    protected void ObjectDataSource1_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)
     {
-        NpgsqlConnection conection = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["postgres"].ConnectionString);
-        conection.Open();
-        NpgsqlCommand command = new NpgsqlCommand("DELETE FROM inventario.producto WHERE nombre='" + txt_objeto.Text + "'", conection);
-        command.ExecuteNonQuery();
-        conection.Close();
+
+
     }
 }

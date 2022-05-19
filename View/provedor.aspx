@@ -99,7 +99,7 @@
           </div>
          <div class="row">
           <div class="col-lg-6">
-           <asp:GridView ID="gvprovedor" runat="server" DataSourceID="SqlDataSource1">
+           <asp:GridView ID="gvprovedor" runat="server">
            </asp:GridView>
        </div>
       </div>

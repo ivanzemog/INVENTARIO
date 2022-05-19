@@ -29,7 +29,7 @@ public class DAOProducto
 
     }
 
-   public void ModificarCantidad(int productoid, int cantidad)
+   /*public void ModificarCantidad(int productoid, int cantidad)
     {
         using (var db = new MapeoLogin())
         {
@@ -44,5 +44,5 @@ public class DAOProducto
 
         }
 
-    }
+    }*/
 }
