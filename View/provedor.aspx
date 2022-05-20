@@ -12,6 +12,9 @@
         .auto-style3 {
             height: 23px;
         }
+        .auto-style4 {
+            height: 197px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -54,10 +57,10 @@
                 &nbsp;</td>
         </tr>
         <tr>
-            <td colspan="2">
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="ODSProveedor" HorizontalAlign="Center" CellPadding="4" ForeColor="#333333" GridLines="None"  Width="90%" OnRowCommand="GridView1_RowCommand" DataKeyNames="Id,Nombre,Empresa,Telefono">
+            <td colspan="2" class="auto-style4">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="ODSprovedor" HorizontalAlign="Center" CellPadding="4" ForeColor="#333333" GridLines="None"  Width="90%" OnRowCommand="GridView1_RowCommand" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" DataKeyNames="Id,Nombre,Empresa,Telefono">
                     <AlternatingRowStyle BackColor="White" />
-                    <Columns>
+                     <Columns>
                         <asp:TemplateField HeaderText="Cedula" SortExpression="Id">
                             <EditItemTemplate>
                                 <asp:Label ID="Label1" runat="server" Text='<%# Bind("Id") %>'></asp:Label>
@@ -96,7 +99,6 @@
                                 <asp:Label ID="Label4" runat="server" Text='<%# Bind("Telefono") %>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
-                       
                         <asp:TemplateField HeaderText="Actualizar" ShowHeader="False">
                             <EditItemTemplate>
                                 <asp:LinkButton ID="LB_Actualizar" runat="server" CausesValidation="True" CommandName="Update" Text="Actualizar" ValidationGroup="valida"></asp:LinkButton>
@@ -117,7 +119,7 @@
                     <SortedDescendingCellStyle BackColor="#FCF6C0" />
                     <SortedDescendingHeaderStyle BackColor="#820000" />
                 </asp:GridView>
-                <asp:ObjectDataSource ID="ODSProveedor" runat="server" DataObjectTypeName="EProvedor" SelectMethod="ObtenerProvedores" TypeName="DAOprovedor" UpdateMethod="actualizarprovedor">
+                <asp:ObjectDataSource ID="ODSprovedor" runat="server" DataObjectTypeName="EProvedor" SelectMethod="ObtenerProvedores" TypeName="DAOprovedor" UpdateMethod="actualizarprovedor">
                 </asp:ObjectDataSource>
             </td>
         </tr>

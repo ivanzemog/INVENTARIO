@@ -52,18 +52,4 @@ public class DAOprovedor
             db.SaveChanges();
         }
     }
-
-  
-    public List<EProvedor> obtenerProvedoresDDL()
-    {
-        using (var db = new MapeoLogin())
-        {
-            List<EProvedor> lista = db.provedor.ToList();
-            EProvedor cat_cero = new EProvedor();
-            cat_cero.Id = "0";
-            cat_cero.Nombre = "--> Seleccione una categoria <--";
-            lista.Add(cat_cero);
-            return lista.OrderBy(x => x.Nombre).ToList();
-        }
-    }
 }

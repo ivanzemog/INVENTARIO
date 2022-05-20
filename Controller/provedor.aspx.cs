@@ -39,4 +39,6 @@ public partial class View_provedor : System.Web.UI.Page
     {
         Response.Redirect("inicio.aspx");
     }
+
+  
 }
