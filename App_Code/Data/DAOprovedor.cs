@@ -21,7 +21,7 @@ public class DAOprovedor
     {
         using (var db = new MapeoLogin())
         {
-          return db.provedor.ToList();
+            return db.provedor.ToList();
         }
     }
     public EProvedor ObtenerProvedor(string id)
