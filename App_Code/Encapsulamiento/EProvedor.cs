@@ -12,21 +12,15 @@ using System.Web;
 [Table("provedor", Schema = "inventario")]
 public class EProvedor
 {
-
-    private string id;
-    private string nombre;
-    private string empresa;
-    private string telefono;
-  
-    [Key, Column("id")]
-    public string Id { get => id; set => id = value; }
-    [Column("nombre")]
-    public string Nombre { get => nombre; set => nombre = value; }
-    [Column("empresa")]
-    public string Empresa { get => empresa; set => empresa = value; }
    
-    [Column("telefono")]
-    public string Telefono { get => telefono; set => telefono = value; }
-
+        [Key, Column("id")]
+        public int Id { get; set; }
+        [Column("nombre")]
+        public string Nombre { get; set; }
+        [Column("cedula")]
+        public string Cedula { get; set; }
+        [Column("empresa")]
+        public string Empresa { get; set; }
+        
 
 }

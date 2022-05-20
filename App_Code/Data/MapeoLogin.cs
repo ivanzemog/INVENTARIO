@@ -11,12 +11,14 @@ public class MapeoLogin : DbContext
     {
         Database.SetInitializer<MapeoLogin>(null);
     }
-    
+    private readonly string schema;
 
-    public MapeoLogin() :base("name= BD_inventario")
+   
+
+    public MapeoLogin() 
+        :base("name= BD_inventario")
     {
     }
-    private readonly string schema;
     protected override void OnModelCreating(DbModelBuilder modelBuilder)
     {
         modelBuilder.HasDefaultSchema(this.schema);
