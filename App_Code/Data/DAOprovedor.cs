@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
@@ -8,12 +9,61 @@ using System.Web;
 /// </summary>
 public class DAOprovedor
 {
-    public void Nuevoprovedor(EProvedor eprovedor)
+    public void insertarProvedor(EProvedor provedor)
     {
         using (var db = new MapeoLogin())
         {
-            db.provedor.Add(eprovedor);
+            db.provedor.Add(provedor);
             db.SaveChanges();
+        }
+    }
+    public List<EProvedor> ObtenerProvedores()
+    {
+        using (var db = new MapeoLogin())
+        {
+          return db.provedor.ToList();
+        }
+    }
+    public EProvedor ObtenerProvedor(string id)
+    {
+        using (var db = new MapeoLogin())
+        {
+            return db.provedor.Where(x => x.Id.Equals(id)).FirstOrDefault();
+        }
+    }
+    public void actualizarprovedor(EProvedor provedor)
+    {
+        using (var db = new MapeoLogin())
+        {
+            db.provedor.Attach(provedor);
+            var entry = db.Entry(provedor);
+            entry.State = EntityState.Modified;
+
+            db.SaveChanges();
+        }
+    }
+    public void elimnarProvedor(EProvedor provedor)
+    {
+        using (var db = new MapeoLogin())
+        {
+            db.provedor.Attach(provedor);
+            var entry = db.Entry(provedor);
+            entry.State = EntityState.Deleted;
+            db.SaveChanges();
+        }
+    }
+
+  
+    public List<EProvedor> obtenerProvedoresDDL()
+    {
+        using (var db = new MapeoLogin())
+        {
+            List<EProvedor> lista = db.provedor.ToList();
+            EProvedor cat_cero = new EProvedor();
+            cat_cero.Id = "0";
+            cat_cero.Nombre = "--> Seleccione una categoria <--";
+            lista.Add(cat_cero);
+            return lista.OrderBy(x => x.Nombre).ToList();
         }
     }
 }
