@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
    
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server" background-color="#FFCECB">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     
     <center><img src="/Imagenes/lp.png" /></center>
 
@@ -19,7 +19,7 @@
         <h2><b>&nbsp; PROVEDORES</b></h2>
         <p>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:ImageButton id="imagebutton2" runat="server" ImageUrl="/Imagenes/5.jpg" OnClick="ImageButton2_Click"/>
+            <asp:ImageButton id="imagebutton2" runat="server" ImageUrl="/Imagenes/logo.jpg" OnClick="ImageButton2_Click" Height="264px" Width="230px"/>
         </p>
     </div>
     <div class="col-md-4">
