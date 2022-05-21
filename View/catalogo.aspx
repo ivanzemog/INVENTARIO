@@ -91,13 +91,20 @@
                                             <td class="auto-style7">Cantidad<asp:TextBox ID="TB_Cantidad" runat="server" TextMode="Number"></asp:TextBox>
                                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="TB_Cantidad" ErrorMessage="*" ValidationGroup="validar"></asp:RequiredFieldValidator>
                                             </td>
-   
+                                            <td>Categoria<asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="ObjectDataSource1" DataTextField="Categoria" DataValueField="Id">
+                                                </asp:DropDownList>
+                                                <asp:RangeValidator ID="RangeValidator2" runat="server" ControlToValidate="DropDownList3" ErrorMessage="Seleccione" ForeColor="Red" MaximumValue="100" MinimumValue="1" Type="Integer" ValidationGroup="validar"></asp:RangeValidator>
+                                                <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="obtenerCategoriasDDL" TypeName="DAOCategoria"></asp:ObjectDataSource>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Imagen 1<asp:FileUpload ID="FU_Foto" runat="server" />
                                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="FU_Foto" ErrorMessage="*" ValidationGroup="validar"></asp:RequiredFieldValidator>
                                             </td>
-             
+                                            <td class="auto-style7">Imagen 2<asp:FileUpload ID="FU_Foto2" runat="server" />
+                                            </td>
+                                            <td>Imagen 3<asp:FileUpload ID="FU_Foto3" runat="server" />
+                                            </td>
                                         </tr>
                                     </table>
                                 </asp:View>
@@ -187,6 +194,17 @@
 
                             </ItemTemplate>
                         </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Categoria" SortExpression="Nombre_categoria">
+                            <EditItemTemplate>
+                                <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="ObjectDataSource1" DataTextField="Categoria" DataValueField="Id">
+                                </asp:DropDownList>
+                                <asp:RangeValidator ID="RangeValidator2" runat="server" ControlToValidate="DropDownList3" ErrorMessage="Seleccione" ForeColor="Red" MaximumValue="100" MinimumValue="1" Type="Integer" ValidationGroup="val"></asp:RangeValidator>
+                                <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="obtenerCategoriasDDL" TypeName="DAOCategoria"></asp:ObjectDataSource>
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="Label7" runat="server" Text='<%# Bind("Nombre_categoria") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
                         <asp:TemplateField HeaderText="Precio Venta" SortExpression="Precio_venta">
                             <EditItemTemplate>
                                 <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("Precio_venta") %>'></asp:TextBox>
@@ -234,6 +252,22 @@
                             </EditItemTemplate>
                             <ItemTemplate>
                                 <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("Imagen_uno") %>' Width="40%" />
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Imagen" SortExpression="Imagen_dos">
+                            <EditItemTemplate>
+                                <asp:FileUpload ID="FU_Imagen2" runat="server" />
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:Image ID="Image2" runat="server" ImageUrl='<%# Eval("Imagen_dos") %>' Width="40%" />
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Imagen" SortExpression="Imagen_tres">
+                            <EditItemTemplate>
+                                <asp:FileUpload ID="FU_Imagen3" runat="server" />
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:Image ID="Image3" runat="server" ImageUrl='<%# Eval("Imagen_tres") %>' Width="40%" />
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Fecha modificacion" SortExpression="Fecha_modificacion">

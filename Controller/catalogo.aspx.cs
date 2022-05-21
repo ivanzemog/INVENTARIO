@@ -71,8 +71,9 @@ public partial class View_catalogo : Page
                 TB_Descripcion.Text = "";
                 TB_Precio_venta.Text = "";
                 TB_Precio_Compra.Text = "";
+                DropDownList3.SelectedValue = "0";
                 TB_Cantidad.Text = "";
-                Response.Redirect("catalogo.aspx");
+                Response.Redirect("CRUD.aspx");
 
 
             }

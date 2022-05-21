@@ -13,17 +13,17 @@ public class EInventario
     private int cantidad;
     private DateTime fecha_modificacion;
     [Key, Column("id")]
-    public int Id { get; set; }
+    public int Id { get => id; set => id = value; }
     [Column("id_producto")]
-    public int Id_producto { get; set; }
+    public int Id_producto { get => id_producto; set => id_producto = value; }
     [NotMapped]
-    public EProducto Producto { get { return new DAOProducto().obtenerProducto(Id_producto); } set { } }
+    public EProducto Producto { get { return new DAOProducto().obtenerProducto(id_producto); } set { } }
     [Column("precio_compra")]
-    public double Precio_compra { get; set; }
+    public double Precio_compra { get => precio_compra; set => precio_compra = value; }
     [Column("cantidad")]
-    public int Cantidad { get; set; }
+    public int Cantidad { get => cantidad; set => cantidad = value; }
     [Column("fecha_modificacion")]
-    public DateTime Fecha_modificacion { get; set; }
+    public DateTime Fecha_modificacion { get => fecha_modificacion; set => fecha_modificacion = value; }
 
 }
 
