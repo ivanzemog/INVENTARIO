@@ -9,8 +9,8 @@ using System.Web;
 /// Descripción breve de EProvedor
 /// </summary>
 [Serializable]
-[Table("provedor", Schema = "inventario")]
-public class EProvedor
+[Table("proveedor", Schema = "inventario")]
+public class EProveedor
 {
    
         [Key, Column("id")]
@@ -21,6 +21,8 @@ public class EProvedor
         public string Cedula { get; set; }
         [Column("empresa")]
         public string Empresa { get; set; }
-        
+        [Column("telefono")]
+        public string Telefono { get; set; }
+
 
 }
