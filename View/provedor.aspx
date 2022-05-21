@@ -11,63 +11,11 @@
     <link href="../App_Themes/webSalud/owl.theme.default.min.css" rel="stylesheet" type="text/css" />
     <link href="../App_Themes/webSalud/owl.theme.default.min.css" rel="stylesheet" type="text/css" />
     <link href="../App_Themes/webSalud/templatemo-medic-care.css" rel="stylesheet" type="text/css" />
-<style type="text/css">
-    .auto-style1 {
-        display: block;
-        width: 100%;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.5;
-        color: #212529;
-        background-clip: padding-box;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        border-radius: .25rem;
-        transition: none;
-        height: 55px;
-        border: 1px solid #ced4da;
-        background-color: #fff;
-    }
-    .auto-style5 {
-        display: block;
-        width: 100%;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.5;
-        color: #212529;
-        background-clip: padding-box;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        border-radius: .25rem;
-        transition: none;
-        height: 40px;
-        border: 1px solid #ced4da;
-        background-color: #fff;
-    }
-    .auto-style6 {
-        display: block;
-        width: 100%;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.5;
-        color: #212529;
-        background-clip: padding-box;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        border-radius: .25rem;
-        transition: none;
-        height: 44px;
-        border: 1px solid #ced4da;
-        background-color: #fff;
-    }
-</style>
+
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
- <asp:ImageButton id="imagebutton" runat="server" ImageUrl="/Imagenes/EM.gif" OnClick="ImageButton1_Click" Height="116px" Width="150px"/>
+    <asp:ImageButton id="imagebutton" runat="server" ImageUrl="/Imagenes/EM.gif" OnClick="ImageButton1_Click" Height="116px" Width="150px"/>
   <section class="section-padding" id="booking">
    <div class="container">
     <div class="row">

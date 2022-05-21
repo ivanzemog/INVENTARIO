@@ -14,7 +14,7 @@ public class EProvedor
 {
    
         [Key, Column("id")]
-        public int Id { get; set; }
+        public string Id { get; set; }
         [Column("nombre")]
         public string Nombre { get; set; }
         [Column("cedula")]
