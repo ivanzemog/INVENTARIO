@@ -15,23 +15,23 @@ public class EProducto
     private DateTime fecha_modificacion;
     private int cantidad_inventario;
     [Key, Column("id")]
-    public int Id { get => id; set => id = value; }
+    public int Id { get; set; }
     [Column("nombre")]
-    public string Nombre { get => nombre; set => nombre = value; }
+    public string Nombre { get; set; }
     [Column("descripcion")]
-    public string Descripcion { get => descripcion; set => descripcion = value; }
+    public string Descripcion { get; set; }
     [Column("precio_venta")]
-    public double Precio_venta { get => precio_venta; set => precio_venta = value; }
+    public double Precio_venta { get; set; }
     [Column("id_proveedor")]
-    public string Id_proveedor { get => id_proveedor; set => id_proveedor = value; }
+    public string Id_proveedor { get; set; }
     [NotMapped]
     public EProveedor proveedor { get { return new DAOProveedor().ObtenerProveedor(Id_proveedor); } set { } }
     [Column("fecha_modificacion")]
-    public DateTime Fecha_modificacion { get => fecha_modificacion; set => fecha_modificacion = value; }
+    public DateTime Fecha_modificacion { get; set; }
     [Column("imagen")]
-    public string Imagen_uno { get => imagen; set => imagen = value; }
+    public string Imagen_uno { get; set; }
     [NotMapped]
-    public int Cantidad_inventario { get => cantidad_inventario; set => cantidad_inventario = value; }
+    public int Cantidad_inventario { get; set; }
     [NotMapped]
     public int Id_inventario { get; set; }
     [NotMapped]
